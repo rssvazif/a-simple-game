@@ -1,0 +1,18 @@
+import random       # I import a library
+min=1
+max=100
+print('please choose a number between 1 to 100 and i guess it !!')
+computer=random.randint(min,max)     # number's guess
+print('is your number ?: ',computer)
+answer=input('that is true or that is false??')
+while answer!='that is true':  #this loop checks user's answer
+    print('help me!!')
+    Help=input()
+    if Help=='its larger than':
+        min=computer+1              #I changed the range of numbers
+    elif Help=='its smaller than':
+        max=computer-1               #I changed the range of numbers
+    computer=random.randint(min,max)
+    print('is your number ?: ',computer)
+    answer=input('that is true or that is false??')
+print('I finded it, ha ha ha')  
